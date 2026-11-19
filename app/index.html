@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice City Trophy Ledger — GTA 6 Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 GTA 6 trophies on PlayStation 5: checklist, roadmap to platinum, missables and cited guides.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-title">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Vice City Trophy Ledger</h1>
+    <p class="subtitle">Every trophy, its official name, description and grade — with a guide in our own words, a source for every claim, and a checklist that remembers where you are. Works fully offline; nothing leaves this browser.</p>
+  </div>
+  <aside class="progress-card" id="progressCard" aria-label="Progress summary">
+    <p class="progress-big"><span id="earnedCount">0</span><span class="progress-of"> / 55 earned</span></p>
+    <div class="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <p class="progress-note" id="platinumNote">Platinum 0% there — Vice Got a Price! waits at the end.</p>
+    <ul class="grade-counts" id="gradeCounts"></ul>
+    <p class="stage-counts" id="stageCounts"></p>
+  </aside>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" class="tab active" data-tab="tracker" id="tab-tracker">Tracker</button>
+  <button type="button" class="tab" data-tab="roadmap" id="tab-roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-tab="missables" id="tab-missables">Missables <span class="tab-badge" id="missableBadge">1</span></button>
+  <button type="button" class="tab" data-tab="sources" id="tab-sources">Sources &amp; honesty</button>
+</nav>
+
+<main>
+  <section id="view-tracker" class="view active">
+    <div class="toolbar">
+      <label class="search-box">Search <input id="search" type="search" placeholder="Trophy name or guide word…" autocomplete="off"></label>
+      <div class="pills" id="kindPills" role="group" aria-label="Filter by kind">
+        <button type="button" class="pill active" data-kind="all">All 55</button>
+        <button type="button" class="pill" data-kind="story">Story</button>
+        <button type="button" class="pill" data-kind="missable">Missable</button>
+        <button type="button" class="pill" data-kind="collectibles">Collectibles</button>
+        <button type="button" class="pill" data-kind="activities">Activities</button>
+        <button type="button" class="pill" data-kind="online">Online</button>
+      </div>
+      <label class="grade-filter">Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" id="spoilers" checked> Hide story spoilers</label>
+      <label class="check"><input type="checkbox" id="earnedOnly"> Earned only</label>
+    </div>
+    <div class="toolbar actions">
+      <button type="button" id="exportBtn">Export progress</button>
+      <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button type="button" id="resetBtn">Reset</button>
+      <p class="list-count" id="listCount"></p>
+    </div>
+    <div class="tracker-grid">
+      <div class="list-col">
+        <ul class="trophy-list" id="trophyList"></ul>
+        <p class="empty-note" id="emptyNote" hidden>No trophy matches these filters. Clear the search or pick another filter.</p>
+      </div>
+      <aside class="detail-col" id="detailPanel" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view">
+    <h2>Roadmap to Platinum</h2>
+    <p class="section-intro">Seven stages, in the order to play them. Story first, strangers second, then activities, collectibles and robberies — and the long grind last. PowerPyx puts the whole run at about 200 hours, difficulty 4 out of 10. There is no mission replay and no New Game Plus, so keep a manual save at the start of every chapter and one before the final mission.</p>
+    <ol class="stages" id="stageList"></ol>
+  </section>
+
+  <section id="view-missables" class="view">
+    <h2>Missables — the honest list</h2>
+    <p class="section-intro">Only one trophy is flagged as possibly missable by the launch guides, and even that one is unconfirmed. Everything else can be done after the story in free roam. The watch list below covers the story windows worth knowing about anyway. <strong>Spoiler protection is on:</strong> in the Tracker, story trophies stay hidden until you earn them — uncheck “Hide story spoilers” there to reveal them.</p>
+    <div id="missableList"></div>
+    <h3>Watch list — story windows, not locked trophies</h3>
+    <ul class="watch-list">
+      <li><strong>Chapter 1 optional missions</strong> — Get Shirley&rsquo;s Rum and Steal the Scooter can disappear. PowerPyx says they do not affect trophies or 100% completion.</li>
+      <li><strong>Time-limited optional missions</strong> — shown with an hourglass icon. There are a few hundred optional missions and the 100% checklist only needs 100, so a missed one does not matter.</li>
+      <li><strong>Big story choices</strong> — keep separate manual saves before them. GTABase advises this as cheap insurance; nothing is confirmed missable.</li>
+      <li><strong>Cheats</strong> — using a cheat disables trophies (and saving) for that session, per PowerPyx and GTABase. Do not use cheats on your trophy save.</li>
+    </ul>
+    <p class="source-line">Sources: <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a> · <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase — GTA 6 Achievements &amp; Trophies List</a></p>
+  </section>
+
+  <section id="view-sources" class="view">
+    <h2>Sources &amp; honesty</h2>
+    <p class="section-intro">The game launched on 19 November 2026 — the day this ledger was built. No complete guide existed yet, so this page says plainly what is known, what is not, and where every fact comes from.</p>
+    <h3>What we know</h3>
+    <ul class="honesty-list">
+      <li><strong>The list itself</strong> — all 55 names, descriptions and grades as PlayStation publishes them, taken from Exophase and PSNProfiles on 18 November 2026 and cross-checked by GTABase and PowerPyx. The two lists agree on every name, description and grade.</li>
+      <li><strong>55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze.</strong> 28 of them are hidden on PlayStation until earned. There are no online trophies — every trophy is single-player.</li>
+      <li><strong>One possibly missable trophy</strong> — Positive Mental Attitude, flagged by both PowerPyx and GTABase because of the Chapter 1 meditation. It is unconfirmed whether that meditation is required.</li>
+      <li><strong>The 100% checklist</strong> — 35 requirements, visible only after the story under Progress &gt; Stats &gt; 100% Completion. Nothing on it is missable; most items need only part of a set.</li>
+      <li><strong>Time and difficulty</strong> — PowerPyx rates the platinum 4/10 and about 200 hours. There are no mission gold medals and no mission replay.</li>
+    </ul>
+    <h3>What we do not know yet</h3>
+    <ul class="honesty-list">
+      <li><strong>Seven trophies have no confirmed trigger</strong> — In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There and Ten Pin (PowerPyx: not yet known), plus Personal Best and Actions Speak Louder (story moments, exact scene unconfirmed). Their guides say so instead of inventing a step.</li>
+      <li><strong>Exact locations</strong> for most collectibles are still being mapped by the community. This ledger gives counts and menu paths the guides have confirmed, not guessed coordinates.</li>
+      <li><strong>Counts</strong> such as 42 shooting-range challenges, 14 drone-race locations and 18 meditation spots come from the launch guides and may be corrected as players verify them in game.</li>
+    </ul>
+    <h3>Sources used for this ledger</h3>
+    <ul class="source-list">
+      <li><a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx — GTA 6 Trophy Guide &amp; Roadmap</a> — roadmap, missable flag, difficulty and time, meditation steps.</li>
+      <li><a href="https://www.powerpyx.com/gta-6-100-completion-checklist-guide/">PowerPyx — GTA 6 100% Completion Checklist &amp; Guide</a> — the 35-item checklist and its counts.</li>
+      <li><a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase — GTA 6 Achievements &amp; Trophies List</a> — the full 55, grades, missable flag, cheat warning.</li>
+      <li><a href="https://gta-zone.com/news/gta-6-trophies-achievements/">GTA Zone — GTA 6 Trophy List</a> — cross-check of the list and the unconfirmed trophies.</li>
+      <li><a href="https://beebom.com/gta-6-meditation-spots-locations/">Beebom — All GTA 6 Meditation Spots Locations</a> — the 18 meditation spots, including the Chapter 1 one.</li>
+      <li><a href="https://www.planetgta6.com/en/gta-6-trophies/">Planet GTA 6 — GTA 6 Trophies</a> — the official list as shown on PlayStation Network.</li>
+      <li>Exophase and PSNProfiles — the official trophy list the launch guides cross-checked against (names, descriptions, grades).</li>
+    </ul>
+    <p class="source-line">Every trophy&rsquo;s guide in this ledger is written in our own words. Sources are cited, never copied. Official trophy names and descriptions are shown exactly as PlayStation publishes them.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Vice City Trophy Ledger — an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Rockstar Games; this ledger uses no Rockstar logo, artwork or game screenshots. Trophy names and descriptions are PlayStation&rsquo;s official text. Progress is saved only in this browser (localStorage). MIT License.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
